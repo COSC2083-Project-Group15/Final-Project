@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--slick css----------------------------------->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/tải xuống.png" type="image/x-icon" />
+
+    <!-- using-font-awesome ------------------------>
+    <link rel="stylesheet" href="./fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <!-- font-family-poppins ----------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>RMIT UNIVERSITY  |   FACILITY</title>
+</head>
+<body>
+    <section id="facility">
+
+        <!-- NAVIGATION -------------------------->
+        <div class="navigation">
+            <!-- LOGO ----------->
+            <div class="navigation-header">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-return-icon"><i class="fa-solid fa-arrow-rotate-left"></i> </span>
+                        <p>Return HomePage</p>
+                </a>
+                        <a href="../index3.html">Fac<i class="fa-solid fa-baseball-bat-ball"></i>lity</a>
+            </div>
+
+                <!-- POST-FILTER ------------->
+                <nav>
+                        <!-- FILTER ------>
+                    <ul class="facility-menu">
+                        <li><a href="">Lab</a>
+                            <ul class="sub-menu">
+                                <li><a href="../lab/computer/computer.html">Computer</a></li>
+                                <li><a href="../lab/ITEngineer/ITEngineer.html">IT and Engineering</a></li>
+                                <li><a href="../lab/finance/finance.html">Financial trading</a></li>
+                                <li><a href="../lab/fashion/fashion.html">Fashion</a></li>
+                            </ul>
+                        </li>
+                        <li class="chosen"><a href="library.html">Library</a></li>
+                        <li><a href="../theatresAuditorium/theatresAuditorium.html">Theotres and Auditorium</a></li>
+                        <li><a href="../studio/studio.html">Studio</a></li>
+                        <li><a href="../SportRecreation/sportRecreation.html">Sports and Recreation</a></li>
+                        <li><a href="../classroom/classroom.html">Classroom</a></li>
+                    </ul>
+                </nav>
+        </div>
+
+
+                 <!-- CONTAINER ------------------------------->
+           
+
+        <div class="library-slider">
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_first .jpeg" ></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_second .jpeg"></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_third .jpeg" ></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_fourth .jpeg" ></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_fifth .jpeg"></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_sixth .jpeg"></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_seventh .jpeg"></div>
+            </div>
+
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_eigth.jpeg"></div>
+            </div>
+                
+            <div class="library-pics">
+                <div class="pic1"><img src="./images/library_ninth.jpeg"></div>
+            </div>    
+        </div> 
+        
+    </section>
+
+    
+        <!-- FOOTER --------------------------->
+        <footer>
+            <span class="copyright"> <i class="fa-solid fa-copyright"></i>  Copyright 2022 - RMIT University VN </span>
+
+            <!-- Social-media ----->
+            <div class="footer-social">
+                <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
+                <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"> <i class="fa-brands fa-youtube"></i></a>
+                
+
+            </div>
+
+        </footer>
+
+    
+    <!-- JQuery -------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Slick script--------------->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
+
+    <!-- Script ------------------------------>
+    <script type="text/javascript">
+
+        /* course-filter-menu-click ------------------------------ */
+        // $(document).on('click','.facility-menu li', function() {
+        //     $(this).addClass('facility-filter-active').siblings().removeClass('facility-filter-active')
+        // });
+
+        $(document).ready(function(){
+            $('.sub-menu').parent('li').addClass('has-child');
+        });
+
+
+        // Fix-filter-menu-when-scroll-down
+
+        $(window).scroll(function(){
+            if($(document).scrollTop() > 80){
+                $('nav').addClass('fix-nav');
+            }
+            else {
+                $('nav').removeClass('fix-nav');
+            }
+        });
+
+        $(document).ready(function(){
+            $('.library-slider').slick({
+                slidesToShow: 1,
+                slideToScroll: 1,
+                arrows: true,
+                Infinity: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                draggable: true,
+                pauseOnFocus: false, 
+                pauseOnHover: false,
+                prevArrow:"<button type='button' class='slick-prev slick-arrow'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+                nextArrow:"<button type='button' class='slick-next slick-arrow'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+                dots: true
+            })
+
+        }); 
+        
+
+    </script> 
+</body>
+</html>
